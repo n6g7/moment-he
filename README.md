@@ -18,14 +18,14 @@ const moment = require('moment-he')
 const now = moment()
 
 // Base formats
-now.humanEra('YY') // 17
+now.humanEra('YY') // 17  (doesn't apply for short format)
 now.humanEra('YYYY') // 12017
 now.humanEra('Y') // 12017
 now.humanEra('gggg') // 12017
 now.humanEra('GGGG') // 12017
 
 // Base formats (with suffix)
-now.humanEra('YY', true) // 17  (doesn't apply for short format)
+now.humanEra('YY', true) // 17
 now.humanEra('YYYY', true) // 12017 HE
 now.humanEra('Y', true) // 12017 HE
 now.humanEra('gggg', true) // 12017 HE
@@ -63,7 +63,7 @@ It works exactly like [`moment().format()`](https://momentjs.com/docs/#/displayi
 
 #### Arguments
 - `format` (string): exact same requirements as [`moment().format()`](https://momentjs.com/docs/#/displaying/format/)
-- `suffix` (boolean): whether to display an extra 'HE' after each year
+- `suffix` (boolean): whether to display an extra 'HE' after each year, defaults to `false`
 
 #### Output
 A string, very similar to what [`moment().format(format)`](https://momentjs.com/docs/#/displaying/format/) would return but with HE years!
